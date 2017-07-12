@@ -5,22 +5,33 @@
 </head>
 <body>
 
+<div id="mainScreen">
+
 <div id="greetingPicture">
-	<image src="assets/greeter.png">
+	<image src="assets/greeter.png"></image>
 </div>
 
 <div id="gameTopControl">
 <form>
+<div>
 	<input name="startGame" type="image" src="assets/startButton.png">
+</div>
 
 <!-- I think we don't need this. Closing the browser tab is 
-	what the user probably expects to do.
-
-	<input name="exitGame">
-
+	what the user probably expects to do. Maybe in full screen
+	we still need it?
 -->
+<div>
+	<input name="exitGame" type="button" value="Exit Game">
+</div>
+
 </form>
 </div>
+
+</div>
+
+
+<script src="scripts/main.js"></script>
 
 </body>
 </html>
