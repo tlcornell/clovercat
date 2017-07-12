@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
 	<title>Clover Cat Circus</title>
+
+	<link rel = "stylesheet" href = "ccc.css" />
 </head>
+
+
+
 <body>
 
 <div id="mainScreen">
 
-<div id="greetingPicture">
-	<image src="assets/greeter.png"></image>
+<div id="greetingPicture" class="start">
+	<img src="assets/greeter.png">
 </div>
 
-<div id="gameTopControl">
+<div id="gameTopControl" class="start">
 <form>
-<div>
-	<input name="startGame" type="image" src="assets/startButton.png">
+<div class="start">
+	<input id="startGame" type="image" src="assets/startButton.png">
 </div>
 
 <!-- I think we don't need this. Closing the browser tab is 
 	what the user probably expects to do. Maybe in full screen
 	we still need it?
 -->
-<div>
-	<input name="exitGame" type="button" value="Exit Game">
+<div class="start">
+	<input id="exitGame" type="button" value="Exit Game">
 </div>
 
 </form>
