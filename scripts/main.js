@@ -62,7 +62,7 @@ function doStartGame() {
 	<div id="welcomeUser">
 		<div id="padding"></div>
 		<div id="messageArea">
-			<p id="welcomeText">${WELCOME_MSG}</p>
+			<p id="welcomeText">Welcome to Clover Cat Circus!</p>
 			<input id="nextButton"
 			       type="image"
 			       src="assets/nextButton.png">
@@ -75,11 +75,43 @@ function doStartGame() {
 	var mainScreen = _e("mainScreen");
 	mainScreen.innerHTML = markup;
 
-	_e("nextButton").onclick = doWelcomeNextMessage;
+	_e("nextButton").onclick = doAPlaceMessage;
 }
 
-function doWelcomeNextMessage() {
-	alert("doWelcomeNextMessage");
+function doAPlaceMessage() {
+	_e("welcomeText").innerHTML = "A place where luck determines all!";
+	_e("nextButton").onclick = doRegisterPlayer;
+}
+
+function doRegisterPlayer() {
+	var markup = `
+	<p id="welcomeText">Now, enter a name, any name!<br>
+	<input type="text" placeholder="Your name here..." id="playerNameField">
+	<input id="enterButton" type="image" src="assets/nextButton.png">
+	`;
+	_e("messageArea").innerHTML = markup;
+	_e("enterButton").onclick = function () {
+		doRegistrationDone(_e("playerNameField").value);
+	};
+}
+
+function doRegistrationDone(player) {
+	var markup = `
+	<p id="welcomeText">
+	Excellent, ${player}! You're ready to go! 
+	Just input your ticket in the Fortune Machine
+	and you'll be able to enter the circus!
+	</p>
+	<input id="nextButton"
+	       type="image"
+	       src="assets/nextButton.png">
+	`;
+	_e("messageArea").innerHTML = markup;
+	_e("nextButton").onclick = doEnterTicket;
+}
+
+function doEnterTicket() {
+	alert("doEnterTicket");
 }
 
 function doExitGame() {

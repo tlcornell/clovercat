@@ -40,10 +40,11 @@
 }
 
 #messageArea {
+	float: center;
 	max-width: 20em;
 	height: auto;
-	float: center;
 	margin: 0 auto;
+	text-align: left;
 }
 
 #welcomeText {
@@ -52,6 +53,6 @@
 
 #nextButton {
 	float: right;
-	margin: 0 1em 0 0;
+	margin: 0 2em 0 0;
 }
 
