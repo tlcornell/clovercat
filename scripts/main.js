@@ -17,8 +17,8 @@ function _e(id) {
 
 function stateStart() {
 	const markup = `
-		<div id="greetingPicture" class="start">
-			<img src="assets/greeter.png">
+		<div id="greetingPictureDiv" class="start">
+			<img id="greetingPicture" src="assets/greeter.png">
 		</div>
 		<div id="gameTopControl" class="start">
 		<div class="start">
@@ -34,9 +34,9 @@ function stateStart() {
 		</div>
 	`;
 	_e("mainScreen").innerHTML = markup;
-	/* Fortunately, once the above is executed, the buttons seem
-	   to be available for having their onclick properties set.
-	*/
+
+
+
 	_e("startGame").onclick = doStartGame;
 	_e("exitGame").onclick = doExitGame;
 }
@@ -74,31 +74,6 @@ function doStartGame() {
 
 	var mainScreen = _e("mainScreen");
 	mainScreen.innerHTML = markup;
-
-	/* Style */
-	var screenStyle = _e("welcomeUser").style;
-	screenStyle.maxWidth = "100vw";
-	screenStyle.height = "100vh";
-	screenStyle.overflow = "hidden";
-	screenStyle.backgroundColor = "#000000";
-	screenStyle.color = "#FFFFFF";
-	screenStyle.textAlign = "center";
-
-	var paddingStyle = _e("padding").style;
-	paddingStyle.height = "33vh";
-
-	var msgAreaStyle = _e("messageArea").style;
-	msgAreaStyle.maxWidth = "20em";
-	msgAreaStyle.height = "auto";
-	msgAreaStyle.float = "center";
-	msgAreaStyle.margin = "0 auto";
-
-	var textStyle = _e("welcomeText").style;
-	textStyle.fontSize = "150%";
-	var buttonStyle = _e("nextButton").style;
-	buttonStyle.float = "right";
-	buttonStyle.margin = "0 1em 0 0";
-
 
 	_e("nextButton").onclick = doWelcomeNextMessage;
 }

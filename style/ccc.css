@@ -2,19 +2,56 @@
 	text-align: center;
 }
 
-#greetingPicture {
+/*******  Start Page  ****************/
 
+#greetingPictureDiv {
+	margin-top: 10vh;
+	margin-bottom: 5vh;
+}
+
+#greetingPicture {
 }
 
 #gameTopControl {
-
 }
 
 #startGame {
-
+	margin-bottom: 1vh;
 }
 
 #exitGame {
 
+}
+
+
+/*******  Login Page ******************/
+
+#welcomeUser {
+	max-width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #000000;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#padding {
+	height: 33vh;
+}
+
+#messageArea {
+	max-width: 20em;
+	height: auto;
+	float: center;
+	margin: 0 auto;
+}
+
+#welcomeText {
+	font-size: 150%;
+}
+
+#nextButton {
+	float: right;
+	margin: 0 1em 0 0;
 }
 
